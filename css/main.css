@@ -1,0 +1,211 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background: #ebecee;
+}
+
+.header {}
+
+.main-header {
+  background: white;
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-top: 20px;
+  padding-bottom: 50px;
+}
+
+.logo {
+  font-family: Arial-BoldMT;
+  font-size: 30px;
+  color: #2f3edf;
+  text-decoration: none;
+}
+
+.avatar {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  float: right;
+  clear: both;
+  margin-left: 10px;
+}
+
+.admin-name {
+  margin-top: 10px;
+  font-family: ArialMT;
+  font-size: 17px;
+  color: #787EC1;
+  float: right;
+}
+
+.welcome h1 {
+  font-family: ArialMT;
+  font-size: 2rem;
+  color: #474b6a;
+  text-align: center;
+  margin-top: 100px;
+}
+
+.welcome p {
+  font-family: ArialMT;
+  font-size: 1rem;
+  color: #474b6a;
+  text-align: center;
+  margin-top: 8px;
+}
+
+.number {
+  display: flex;
+  margin-top: 60px;
+}
+
+.newpost {
+  text-align: center;
+  width: 30%;
+}
+
+.newpost h2 {
+  font-family: ArialMT;
+  font-size: 37px;
+  color: #26dfc0;
+}
+
+.newpost p {
+  font-family: PingFangSC-Regular;
+  font-size: 15px;
+  color: #82828e;
+}
+
+.line {
+  width: 1px;
+  background: #E0E0E0;
+}
+
+.article-container {
+  padding-top: 55px;
+  padding-left: 155px;
+  padding-right: 155px;
+}
+/*文章列表 日历*/
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.calander {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.summary {
+  font-family: PingFangSC-Regular;
+  font-size: 17px;
+  color: #474b6a;
+  margin: 26px;
+}
+
+.button {
+  border-radius: 36px;
+  background-color: #7c90e3;
+  padding: 10px 15px;
+  margin: 5px;
+  font-size: 14px;
+  color: #ffffff;
+}
+
+.next-button {
+  padding: 10px 15px;
+  margin: 5px;
+  font-size: 14px;
+  list-style: none;
+  color: #7c90e3;
+}
+
+.next-button:hover {
+  background-color: #7c90e3;
+  color: #ffffff;
+}
+/*文章*/
+
+.article-item {
+  background: #ffffff;
+  padding-left: 90px;
+  padding-right: 90px;
+  padding-top: 25px;
+}
+
+.article-item h1 {
+  font-family: HelveticaNeue-Bold;
+  font-size: 1.2rem;
+  line-height: 1.3rem;
+  color: #727487;
+}
+
+.article-item p {
+  font-family: HelveticaNeue-Bold;
+  font-size: 0.8rem;
+  color: #a2a2b0;
+  line-height: 1.5rem;
+  margin-top: 10px;
+}
+
+.article-item img {
+  height: 20px;
+  width: 20px;
+}
+
+.info {
+  display: flex;
+  margin-top: 15px;
+  align-items: center;
+}
+
+.divider {
+  margin-top: 20px;
+  border: solid 1px #f1f1f3;
+}
+
+.author {
+  font-family: HelveticaNeue;
+  font-size: 12px;
+  color: #a3a5b4;
+  margin-left: 20px;
+}
+
+.publish-date {
+  font-family: HelveticaNeue;
+  font-size: 10px;
+  color: #b2b5bc;
+  margin-left: 15px;
+}
+
+.main-footer {
+  height: 150px;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #797676;
+  margin-top: 50px;
+}
+
+.main-footer span {
+  margin: 5px;
+}
+
+.background-cover {
+  background-position: 50%;
+  background-repeat: no-repeat no-repeat;
+  background-size: cover;
+}
