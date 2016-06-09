@@ -10,6 +10,7 @@ new Vue({
           todayCount: 9999,
           yesterdayCount: 9999,
           articles: [],
+          currentUrl: 'http://hanks.xyz',
     },
     methods: {
         initData: function(cur) {
@@ -110,6 +111,12 @@ new Vue({
             var d = day;
             if(d<10) d = "0" + d;
             return y+"-"+m+"-"+d
+        },
+        changeArticle: function(index) {
+            var that = this;
+            var article = that.articles[index];
+            console.log(article.article_url);
+            that.currentUrl = article.article_url;
         },
     }
 });

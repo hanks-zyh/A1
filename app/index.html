@@ -2,91 +2,60 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Android日报</title>
-  <link rel="stylesheet" href="./css/main.css">
-  <link rel='shortcut icon' href='/images/favicon.ico'/>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Android日报</title>
+	<link rel="stylesheet" href="./css/main.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css" />
+	<link rel='shortcut icon' href='/images/favicon.ico' />
+
 </head>
 
 <body>
-  <div id="app">
-    <div class="header background-cover">
-      <header class="main-header">
-        <nav>
-          <a class="logo" href="http://hanks.xyz">Hanks.xyz</a>
-          <a href="https://github.com/hanks-zyh"><img src="http://file.bmob.cn/M03/0C/37/oYYBAFb-fZuAC873AADG5Y6ZAAE408.png" class="avatar">
-          </a>
-          <span class="admin-name">hanks</span>
-        </nav>
-        <div class="welcome">
-          <h1>Welcome to Android daily !</h1>
-          <p>以下为 {{ currentDay }} 的文章。</p>
-        </div>
-        <div class="number" id="number">
-          <div class="newpost">
-            <h2>{{ todayCount }}</h2>
-            <p>今日收录文章数量</p>
-          </div>
-          <div class="line"></div>
-          <div class="newpost">
-            <h2>{{ totalCount }}</h2>
-            <p>收录文章总数量</p>
-          </div>
-          <div class="line"></div>
-          <div class="newpost">
-            <h2>{{yesterdayCount}}</h2>
-            <p>昨日收录文章数量</p>
-          </div>
-        </div>
-      </header>
-    </div>
-    <div class="article-container">
-      <div class="topbar">
-        <div class="summary">
-          文章列表
-        </div>
-        <div>
-          <nav id="navigation">
-            <ul class="calander no-space move-buttons custom-icons">
-              <li @click="getNext(currentDay)" class="next-button">❮</li>
-              <li class="button">{{currentDay}}</li>
-              <li @click="getPre(currentDay)" class="next-button">❯</li>
-            </ul>
-          </nav>
-        </div>
-      </div>
-      <section>
-        <div id="articleList">
-          <article v-for="article in articles">
-            <a href="{{ article.article_url }}">
-              <div class="article-item">
-                <h1>{{ article.title }}</h1>
-                <p>{{ article.subtitle }}</p>
-                <div class="info">
-                  <img v-if="article.article_from == 'jianshu' " src="http://file.bmob.cn/M03/0C/37/oYYBAFb-fbiAEJQGAAB6nie4SOk353.jpg">
-                  <img v-if="article.article_from == 'medium' " src="http://file.bmob.cn/M03/0C/38/oYYBAFb-fc2AdJjCAAAkM0vHqfQ373.png">
-                  <img v-if="article.article_from == 'csdn' " src="https://dn-coding-net-production-pp.qbox.me/f168a279-72e1-4654-b9ba-44bc165dd416.png">
-                  <img v-if="article.article_from == 'weixin' " src="http://bmob-cdn-878.b0.upaiyun.com/2016/05/23/c4a6db8540f151fa807d5c5d3466f9a0.png">
-                  <span class="author">{{ article.author_name }}</span>
-                  <!--<span class="publish-date">{{ article.created_at }}</span>-->
-                </div>
-                <div class="divider"></div>
-              </div>
-            </a>
-          </article>
-        </div>
-      </section>
-    </div>
-    <footer>
-      <div class="main-footer">
-        <span>Android Daily</span>
-        <span>Support by hanks.xyz</span>
-      </div>
-    </footer>
-  </div>
-  <script src="https://cdn1.lncld.net/static/js/av-mini-0.6.4.js"></script>
-  <script src="http://cdnjs.cloudflare.com/ajax/libs/vue/1.0.18/vue.min.js" type="text/javascript" charset="utf-8"></script>
-  <script src="./js/main.js"></script>
+
+	<div class="main" id="app">
+		<div class="toolbar">
+			<ul>
+				<li><i class="icon-camera-retro"></i></li>
+				<li><i class="icon-twitter"></i></li>
+				<li><i class="icon-camera-retro"></i></li>
+				<li><i class="icon-twitter"></i></li>
+			</ul>
+		</div>
+		<div class="row-fluid" >
+			<div class="article-list">
+				<section>
+					<div id="articleList">
+						<article v-for="article in articles">
+							<a href="#" v-on:click="changeArticle($index)">
+								<div class="article-item">
+									<h1>{{ article.title }}</h1>
+									<p>{{ article.subtitle }}</p>
+									<div class="info">
+										<img v-if="article.article_from == 'jianshu' " src="http://file.bmob.cn/M03/0C/37/oYYBAFb-fbiAEJQGAAB6nie4SOk353.jpg">
+										<img v-if="article.article_from == 'medium' " src="http://file.bmob.cn/M03/0C/38/oYYBAFb-fc2AdJjCAAAkM0vHqfQ373.png">
+										<img v-if="article.article_from == 'csdn' " src="https://dn-coding-net-production-pp.qbox.me/f168a279-72e1-4654-b9ba-44bc165dd416.png">
+										<img v-if="article.article_from == 'weixin' " src="http://bmob-cdn-878.b0.upaiyun.com/2016/05/23/c4a6db8540f151fa807d5c5d3466f9a0.png">
+										<span class="author">{{ article.author_name }}</span>
+										<!--<span class="publish-date">{{ article.created_at }}</span>-->
+									</div>
+									<div class="divider"></div>
+								</div>
+							</a>
+						</article>
+					</div>
+				</section>
+
+			</div>
+			<div class="article-detail">
+				<iframe src="{{ currentUrl }}"></iframe>
+			</div>
+		</div>
+	</div>
+
+	<script src="https://cdn1.lncld.net/static/js/av-mini-0.6.4.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/vue/1.0.18/vue.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="./js/main.js"></script>
 </body>
+
 </html>
