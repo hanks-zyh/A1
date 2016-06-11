@@ -234,24 +234,32 @@ figure {
 	z-index: 1049;
 }
 
-.toolbar>ul>li{
+.toolbar li{
 	color: white;
 	text-align: center;
 	height: 45px;
 	padding-top: 14px;
 }
 
-.toolbar>ul>li>img{
-	width: 20px;
-	height: 20px;
-}
-
-.toolbar>ul>li:hover {
+.toolbar li:hover {
 	background: grey;
 	-webkit-transition: background 1s;
 	-moz-transition: background 1s;
 	transition: background 1s ;
 }
+
+.toolbar img{
+	width: 20px;
+	height: 20px;
+}
+
+li.setting {
+    position: fixed;
+    bottom: 0;
+    width: 45px;
+}
+
+/*文章列表*/
 
 .row-fluid {
 	margin-left: 45px;
@@ -283,6 +291,12 @@ figure {
 	padding-left: 10px;
 	padding-right: 10px;
 	padding-top: 8px;
+}
+.article-item:hover{
+	background: #3A3F45;
+	-webkit-transition: background 1s;
+	-moz-transition: background 1s;
+	transition: background 1s;
 }
 
 .article-item h1 {
