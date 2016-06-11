@@ -60,7 +60,6 @@ figure {
 }
 
 .logo {
-	font-family: Arial-BoldMT;
 	font-size: 30px;
 	color: #2f3edf;
 	text-decoration: none;
@@ -77,14 +76,12 @@ figure {
 
 .admin-name {
 	margin-top: 10px;
-	font-family: ArialMT;
 	font-size: 17px;
 	color: #787EC1;
 	float: right;
 }
 
 .welcome h1 {
-	font-family: ArialMT;
 	font-size: 2rem;
 	color: #474b6a;
 	text-align: center;
@@ -92,7 +89,6 @@ figure {
 }
 
 .welcome p {
-	font-family: ArialMT;
 	font-size: 1rem;
 	color: #474b6a;
 	text-align: center;
@@ -110,13 +106,11 @@ figure {
 }
 
 .newpost h2 {
-	font-family: ArialMT;
 	font-size: 37px;
 	color: #26dfc0;
 }
 
 .newpost p {
-	font-family: PingFangSC-Regular;
 	font-size: 15px;
 	color: #82828e;
 }
@@ -148,7 +142,6 @@ figure {
 }
 
 .summary {
-	font-family: PingFangSC-Regular;
 	font-size: 17px;
 	color: #474b6a;
 	margin: 26px;
@@ -180,14 +173,12 @@ figure {
 /*文章*/
 
 .author {
-	font-family: HelveticaNeue;
 	font-size: 12px;
 	color: #a3a5b4;
 	margin-left: 20px;
 }
 
 .publish-date {
-	font-family: HelveticaNeue;
 	font-size: 10px;
 	color: #b2b5bc;
 	margin-left: 15px;
