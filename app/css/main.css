@@ -234,11 +234,16 @@ figure {
 	z-index: 1049;
 }
 
-.toolbar>ul>li {
+.toolbar>ul>li{
 	color: white;
 	text-align: center;
 	height: 45px;
 	padding-top: 14px;
+}
+
+.toolbar>ul>li>img{
+	width: 20px;
+	height: 20px;
 }
 
 .toolbar>ul>li:hover {
