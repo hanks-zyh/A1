@@ -232,13 +232,20 @@ figure {
 	overflow: visible;
 	margin-bottom: 20px;
 	z-index: 1049;
-	padding-top: 30px;
 }
 
-.toolbar li {
+.toolbar>ul>li {
 	color: white;
 	text-align: center;
 	height: 45px;
+	padding-top: 14px;
+}
+
+.toolbar>ul>li:hover {
+	background: grey;
+	-webkit-transition: background 1s;
+	-moz-transition: background 1s;
+	transition: background 1s ;
 }
 
 .row-fluid {
