@@ -1,3 +1,6 @@
+var request = require("request");
+
+
 AV.initialize('RI9y3H5x69wdwmC6Nw1J9erS-gzGzoHsz', 'nflt3xUGTePUKx6aBcvAwpf2');
 new Vue({
     el: "#app",
@@ -54,9 +57,16 @@ new Vue({
                 that.yesterdayCount = 9999;
             });
         },
-        fetchHtml: function (url) {
-            fetch(url).then(function (response) {
-                this.currentArticle = response.text();
+        fetchHtml: function (articleUrl) {
+            var options = {
+                method: 'GET',
+                url: articleUrl,
+                headers: { 'user-agent': 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.23 Mobile Safari/537.36' }
+            };
+            request(options, function (error, response, body) {
+                if (error) throw new Error(error);
+                this.currentArticle = body;
+                console.log(body);
             });
         },
         getArticlesByDay: function (currentDay, theModel) {
