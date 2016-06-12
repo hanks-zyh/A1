@@ -55,8 +55,8 @@ new Vue({
             });
         },
         fetchHtml: function (url) {
-            fetch(url, {}).then(function (rep) {
-                this.currentArticle = rep.text();
+            fetch(url).then(function (response) {
+                this.currentArticle = response.text();
             });
         },
         getArticlesByDay: function (currentDay, theModel) {
