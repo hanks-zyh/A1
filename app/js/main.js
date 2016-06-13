@@ -132,8 +132,9 @@ new Vue({
             var that = this;
             var article = that.articles[index];
             console.log(article.article_url);
+            const webview = document.getElementById('foo');
             that.currentUrl = article.article_url;
-            this.fetchHtml(that.currentUrl);
+            // this.fetchHtml(that.currentUrl);
         },
     }
 });
