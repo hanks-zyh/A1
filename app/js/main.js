@@ -136,5 +136,43 @@ new Vue({
             that.currentUrl = article.article_url;
             // this.fetchHtml(that.currentUrl);
         },
+        showHomePage: function () {
+        },
+        showSettingPage: function () {
+        },
+
+        getArticlesByPlatform: function (articleFrom) {
+            var that = this;
+            var query = new AV.Query('Article');
+            query.addDescending('createdAt');
+            query.equalTo('article_from', articleFrom);
+            query.find().then(function (results) {
+                // 处理返回的结果数据
+                that.articles.length = 0;
+                for (var i = 0; i < results.length; i++) {
+                    var object = results[i];
+                    that.articles.push({
+                        title: object.get('title'),
+                        subtitle: object.get('subtitle'),
+                        article_url: object.get('url'),
+                        author_name: object.get('author_name'),
+                        created_at: object.getCreatedAt(),
+                        article_from: object.get('article_from'),
+                    })
+                }
+            }, function (error) {
+                console.log('Error: ' + error.code + ' ' + error.message);
+            });
+        },
+
+        showJianshuArticle: function () {
+            this.getArticlesByPlatform('jianshu');
+        },
+        showCsdnArticle: function () {
+            this.getArticlesByPlatform('csdn');
+        },
+        showMediumArticle: function () {
+            this.getArticlesByPlatform('medium');
+        },
     }
 });

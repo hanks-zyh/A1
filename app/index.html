@@ -15,11 +15,11 @@
 	<div class="main" id="app">
 		<div class="toolbar">
 			<ul>
-				  <li class="home"><img src="http://bmob-cdn-878.b0.upaiyun.com/2016/06/11/1aec794940e4e7ac80b0a02b464da343.svg" alt="home"></li>
-					<li class="platform"><img src="https://dn-coding-net-production-pp.qbox.me/f168a279-72e1-4654-b9ba-44bc165dd416.png" alt="csdn"></li>
-					<li class="platform"><img src="http://file.bmob.cn/M03/0C/37/oYYBAFb-fbiAEJQGAAB6nie4SOk353.jpg" alt="jianshu"></li>
-					<li class="platform"><img src="http://file.bmob.cn/M03/0C/38/oYYBAFb-fc2AdJjCAAAkM0vHqfQ373.png" alt="medium"></li>
-					<li class="setting"><img src="http://bmob-cdn-878.b0.upaiyun.com/2016/06/11/d4af4b2a40e65ee2806fbf0486d9914a.svg" alt="setting"></li>
+				  <li class="home" v-on:click="showHomePage()"><img src="http://bmob-cdn-878.b0.upaiyun.com/2016/06/11/1aec794940e4e7ac80b0a02b464da343.svg" alt="home"></li>
+					<li class="platform" v-on:click="showCsdnArticle()"><img src="https://dn-coding-net-production-pp.qbox.me/f168a279-72e1-4654-b9ba-44bc165dd416.png" alt="csdn"></li>
+					<li class="platform" v-on:click="showJianshuArticle()"><img src="http://file.bmob.cn/M03/0C/37/oYYBAFb-fbiAEJQGAAB6nie4SOk353.jpg" alt="jianshu"></li>
+					<li class="platform" v-on:click="showMediumArticle()"><img src="http://file.bmob.cn/M03/0C/38/oYYBAFb-fc2AdJjCAAAkM0vHqfQ373.png" alt="medium"></li>
+					<li class="setting" v-on:click="showSetting()"><img src="http://bmob-cdn-878.b0.upaiyun.com/2016/06/11/d4af4b2a40e65ee2806fbf0486d9914a.svg" alt="setting"></li>
 			</ul>
 		</div>
 		<div class="row-fluid">
