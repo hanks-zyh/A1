@@ -10,6 +10,7 @@ var app = new Vue({
         currentUrl: 'http://hanks.xyz',
         currentPage: 0,
         currentPlatform: '',
+        searchKey: '',
     },
     methods: {
         initData: function () {
@@ -62,6 +63,35 @@ var app = new Vue({
                 console.log('Error: ' + error.code + ' ' + error.message);
             });
         },
+        getArticlesByKeywork: function (keyword) {
+            var that = this;
+            var query = new AV.Query('Article');
+            var pageSize = 20;
+            query.addDescending('createdAt');
+            query.contains('title', keyword); // 关键字
+            query.limit(pageSize);
+            query.skip(pageSize * this.currentPage);
+            query.find().then(function (results) {
+                // 处理返回的结果数据
+                if (that.currentPage == 0) {
+                    that.articles.length = 0;
+                }
+                that.currentPage++;
+                for (var i = 0; i < results.length; i++) {
+                    var object = results[i];
+                    that.articles.push({
+                        title: object.get('title'),
+                        subtitle: object.get('subtitle'),
+                        article_url: object.get('url'),
+                        author_name: object.get('author_name'),
+                        created_at: object.getCreatedAt(),
+                        article_from: object.get('article_from'),
+                    })
+                }
+            }, function (error) {
+                console.log('Error: ' + error.code + ' ' + error.message);
+            });
+        },
 
         showJianshuArticle: function () {
             this.currentPage = 0;
@@ -79,7 +109,20 @@ var app = new Vue({
             this.getArticlesByPlatform();
         },
         loadMore: function () {
-            this.getArticlesByPlatform();
+            if (this.currentPlatform == 'search') {
+                this.getArticlesByKeywork(this.searchKey.trim());
+            } else {
+                this.getArticlesByPlatform();
+            }
+        },
+        searchArticle: function () {
+            var text = this.searchKey.trim()
+            if (text) {
+                this.currentPage = 0;
+                this.searchKey = '';
+                this.currentPlatform = 'search';
+                this.getArticlesByKeywork(text);
+            }
         },
     }
 });
