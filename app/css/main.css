@@ -27,7 +27,6 @@ body {
 	font-size: 12px;
 	font-family: "Microsoft Yahei", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	line-height: 20px;
-	color: gray;
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
 	min-width: 300px;
@@ -40,134 +39,6 @@ body {
 a {
 	text-decoration: none;
 	transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
-}
-
-div,
-h2,
-p,
-figure {
-	margin: 0;
-	padding: 0;
-}
-
-.header {}
-
-.main-header {
-	background: white;
-	padding-left: 100px;
-	padding-right: 100px;
-	padding-top: 20px;
-	padding-bottom: 50px;
-}
-
-.logo {
-	font-size: 30px;
-	color: #2f3edf;
-	text-decoration: none;
-}
-
-.avatar {
-	width: 35px;
-	height: 35px;
-	border-radius: 50%;
-	float: right;
-	clear: both;
-	margin-left: 10px;
-}
-
-.admin-name {
-	margin-top: 10px;
-	font-size: 17px;
-	color: #787EC1;
-	float: right;
-}
-
-.welcome h1 {
-	font-size: 2rem;
-	color: #474b6a;
-	text-align: center;
-	margin-top: 100px;
-}
-
-.welcome p {
-	font-size: 1rem;
-	color: #474b6a;
-	text-align: center;
-	margin-top: 8px;
-}
-
-.number {
-	display: flex;
-	margin-top: 60px;
-}
-
-.newpost {
-	text-align: center;
-	width: 30%;
-}
-
-.newpost h2 {
-	font-size: 37px;
-	color: #26dfc0;
-}
-
-.newpost p {
-	font-size: 15px;
-	color: #82828e;
-}
-
-.line {
-	width: 1px;
-	background: #E0E0E0;
-}
-
-.article-container {
-	padding-top: 55px;
-	padding-left: 155px;
-	padding-right: 155px;
-}
-
-
-/*文章列表 日历*/
-
-.topbar {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-}
-
-.calander {
-	list-style: none;
-	display: flex;
-	align-items: center;
-}
-
-.summary {
-	font-size: 17px;
-	color: #474b6a;
-	margin: 26px;
-}
-
-.button {
-	border-radius: 36px;
-	background-color: #7c90e3;
-	padding: 10px 15px;
-	margin: 5px;
-	font-size: 14px;
-	color: #ffffff;
-}
-
-.next-button {
-	padding: 10px 15px;
-	margin: 5px;
-	font-size: 14px;
-	list-style: none;
-	color: #7c90e3;
-}
-
-.next-button:hover {
-	background-color: #7c90e3;
-	color: #ffffff;
 }
 
 
@@ -211,7 +82,6 @@ figure {
 	position: relative;
 	min-width: 800px;
 	margin: 0 auto;
-	background: black;
 }
 
 .toolbar {
