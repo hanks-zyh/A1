@@ -1,5 +1,3 @@
-var request = require("request");
-
 
 AV.initialize('RI9y3H5x69wdwmC6Nw1J9erS-gzGzoHsz', 'nflt3xUGTePUKx6aBcvAwpf2');
 var app = new Vue({
