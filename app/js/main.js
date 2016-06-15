@@ -72,6 +72,7 @@ var app = new Vue({
             query.limit(pageSize);
             query.skip(pageSize * this.currentPage);
             query.find().then(function (results) {
+                console.log('个数'+results.length);
                 // 处理返回的结果数据
                 if (that.currentPage == 0) {
                     that.articles.length = 0;
@@ -119,7 +120,7 @@ var app = new Vue({
             var text = this.searchKey.trim()
             if (text) {
                 this.currentPage = 0;
-                this.searchKey = '';
+                // this.searchKey = '';
                 this.currentPlatform = 'search';
                 this.getArticlesByKeywork(text);
             }
@@ -134,7 +135,7 @@ if (list) {
         //console.log('......' + list.scrollTop + "," + list.scrollHeight + "," + list.clientHeight);
         if (list.scrollTop + list.clientHeight == list.scrollHeight) {
             // alert("到达底部");
-            console.log("到达底部");
+            // console.log("到达底部");
             app.loadMore();
         }
     }
