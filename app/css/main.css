@@ -144,6 +144,7 @@ li.setting {
     background-size: 20px;
 }
 
+
 .article-list {
 	height: 100%;
 	width: 300px;
@@ -151,6 +152,15 @@ li.setting {
 	position: fixed;
 	background: #2F3239;
 	overflow-y: auto;
+}
+.search-form{
+	width: 291px;
+    position: fixed;
+    background: #2f3239;
+}
+
+.articleList{
+	padding-top: 65px;
 }
 
 .article-detail {
