@@ -86,10 +86,10 @@ a {
 
 .toolbar {
 	left: 0;
-	top: 0;
+	top: 40px;
 	position: fixed;
 	height: 100%;
-	background: #2a2a2a;
+	background: #2F3239;
 	width: 45px;
 	overflow: visible;
 	margin-bottom: 20px;
@@ -152,6 +152,7 @@ li.setting {
 	position: fixed;
 	background: #2F3239;
 	overflow-y: auto;
+	margin-top: 25px;
 }
 .search-form{
 	width: 291px;
@@ -166,7 +167,7 @@ li.setting {
 .article-detail {
 	margin-left: 300px;
 	width: 500px;
-	height: 718px;
+	height: 768px;
 	overflow-y: auto;
 	background: white;
 	position: relative;
