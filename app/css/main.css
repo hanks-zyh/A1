@@ -200,6 +200,7 @@ webview{
 	color: #fff;
 	max-height: 40px;
 	line-height: 1.3rem;
+	overflow: hidden;
 }
 
 .article-item p {

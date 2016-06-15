@@ -67,8 +67,9 @@ var app = new Vue({
             var that = this;
             var query = new AV.Query('Article');
             var pageSize = 20;
-            query.addDescending('createdAt');
-            query.contains('title', keyword); // 关键字
+            query.addDescending('createdAt'); 
+            var regExp = new RegExp(keyword, 'i'); // 关键字，忽略大小写 
+            query.matches('title', regExp); 
             query.limit(pageSize);
             query.skip(pageSize * this.currentPage);
             query.find().then(function (results) {
