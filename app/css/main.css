@@ -140,8 +140,8 @@ li.setting {
 	background-size: 20px;
 }
 
-.search:active {
-	border: 1px solid green;
+.search:focus {
+	border: 1px double #00691b;
 }
 
 .article-list {
