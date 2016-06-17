@@ -12,6 +12,13 @@ var app = new Vue({
         currentPlatform: '',
         searchKey: '',
     },
+
+    watch: {
+        'searchKey': function (val, oldVal) {
+          //console.log('new: %s, old: %s', val, oldVal)
+          this.searchArticle();
+        },
+    },
     methods: {
         initData: function () {
             this.showHomePage();
