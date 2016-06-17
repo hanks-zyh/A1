@@ -143,7 +143,7 @@ if (list) {
 }
 
 // 判断平台
-if(process.platform == 'drywin'){
-    document.getElementsByClassName('article-list')[0].style.marginTop = 25;
-    document.getElementsByClassName('toolbar')[0].style.top = 40;
-}
+// if(process.platform == 'drywin'){
+//     document.getElementsByClassName('article-list')[0].style.marginTop = 25;
+//     document.getElementsByClassName('toolbar')[0].style.top = 40;
+// }
