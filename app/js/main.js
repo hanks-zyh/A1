@@ -7,7 +7,7 @@ var app = new Vue({
     },
     data: {
         articles: [],
-        currentUrl: 'http://hanks.xyz',
+        currentUrl: 'http://hanks-zyh.github.io',
         currentPage: 0,
         currentPlatform: '',
         searchKey: '',

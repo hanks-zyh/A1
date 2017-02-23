@@ -35,7 +35,7 @@ html {
 }
 
 body {
-	font-size: 12px;
+	font-size: 14px;
 	font-family: "Microsoft Yahei", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
@@ -74,7 +74,7 @@ a {
 /*工具栏*/
 
 .toolbar {
-	width: 45px;
+	width: 50px;
 	min-width: 45px;
 	display: flex;
 	background: #2f2f2f;
@@ -136,7 +136,7 @@ li.setting {
 	outline: none;
 	border-radius: 15px;
 	transition: border-color 0.2s ease;
-	background: #fff url("http://vuejs.org.cn/images/search.png") 8px 5px no-repeat;
+	background: #fff url("https://vuefe.cn/images/search.png") 8px 5px no-repeat;
 	background-size: 20px;
 }
 
@@ -153,7 +153,7 @@ li.setting {
 	background: #2F3239;
 	padding-left: 10px;
 	padding-right: 10px;
-	padding-top: 8px;
+	padding-top: 16px;
 }
 
 .article-item:hover {
@@ -173,7 +173,7 @@ li.setting {
 }
 
 .article-item p {
-	font-size: 0.8rem;
+	font-size: 0.7rem;
 	color: #a2a2b0;
 	line-height: 1.5rem;
 	margin-top: 10px;
@@ -183,8 +183,8 @@ li.setting {
 }
 
 .article-item img {
-	height: 20px;
-	width: 20px;
+	height: 15px;
+	width: 15px;
 }
 
 .info {
@@ -196,11 +196,11 @@ li.setting {
 .author {
 	font-size: 12px;
 	color: #a3a5b4;
-	margin-left: 20px;
+	margin-left: 8px;
 }
 
 .divider {
-	margin-top: 8px;
+	margin-top: 16px;
 	height: 1px;
 	background: #292D32;
 	margin-left: -10px;
@@ -220,4 +220,5 @@ li.setting {
 
 .webview {
 	flex: 1;
+	background-color: white;
 }
