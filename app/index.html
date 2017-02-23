@@ -24,7 +24,7 @@
 				<div class="article-list-layout">
 					<form class="search-form">
 						<input type="text" class="search" placeholder="search" v-model="searchKey" debounce="500" >
-					</form> 
+					</form>
 					<div class="article-list">
 						<article v-for="article in articles">
 							<a href="#" v-on:click="changeArticle($index)">
@@ -52,6 +52,11 @@
 				<div class="main-footer">
 				</div>
 			</div>
+			<script>
+				delete window.require;
+				delete window.exports;
+				delete window.module;
+			</script>
 			<script src="https://cdn1.lncld.net/static/js/av-mini-0.6.4.js"></script>
 			<script src="http://cdnjs.cloudflare.com/ajax/libs/vue/1.0.24/vue.min.js" type="text/javascript" charset="utf-8"></script>
 			<script src="./js/main.js"></script>
